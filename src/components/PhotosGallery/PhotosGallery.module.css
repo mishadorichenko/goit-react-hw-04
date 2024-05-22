@@ -1,0 +1,14 @@
+.main {
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.galleryItem {
+  flex: 1 0 calc((100% / 4) - 10px);
+  list-style: none;
+}
