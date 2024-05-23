@@ -1,6 +1,6 @@
-import css from './PhotoCard.module.css';
+import css from './ImageCard.module.css';
 
-function PhotoCard({ item: { urls, alt_description }, onImageClick }) {
+function ImageCard({ item: { urls, alt_description }, onImageClick }) {
   return (
     <div>
       <img
@@ -13,4 +13,4 @@ function PhotoCard({ item: { urls, alt_description }, onImageClick }) {
   );
 }
 
-export default PhotoCard;
+export default ImageCard;

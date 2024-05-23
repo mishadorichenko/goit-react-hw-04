@@ -1,11 +1,11 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import PhotosGallery from '../PhotosGallery/PhotosGallery';
+import ImageGallery from '../ImageGallery/ImageGallery';
 import SearchBar from '../SearchBar/SearchBar';
 import { getPhotos } from '../../photos-api';
 import Loader from '../Loader/Loader';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import LoadMore from '../LoadMore/LoadMore';
+import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import UserMessage from '../UserMessage/UserMessage';
 import ImageModal from '../ImageModal/ImageModal';
 
@@ -98,11 +98,11 @@ function App() {
       {/* <SearchBar onSearch={onSearch} /> */}
       <SearchBar onSearch={handleSearch} />
       {photos.length > 0 && (
-        <PhotosGallery items={photos} onImageClick={openModal} />
+        <ImageGallery items={photos} onImageClick={openModal} />
       )}
       <Loader isLoading={isLoading} />
       {isError && <ErrorMessage />}
-      {showBtn && !isLoading && <LoadMore onClick={handleLoadMore} />}
+      {showBtn && !isLoading && <LoadMoreBtn onClick={handleLoadMore} />}
       {userMessage && <UserMessage message={userMessage} />}
       <ImageModal
         modalIsOpen={modalIsOpen}
